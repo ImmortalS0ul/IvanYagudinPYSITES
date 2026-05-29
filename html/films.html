@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<h1>{{films.name}}</h1>
+написал {{films.avt}} <br>
+<b>ID:</b> {{ films.id }} <br>
+{% if is_admin %}
+    <a href="/delete/{{ films.id }}">Удалить фильм</a>
+{% endif %}
+</body>
+</html>
